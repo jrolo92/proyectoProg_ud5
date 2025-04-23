@@ -17,11 +17,15 @@ public class Main {
 //		Mostrar reservas por dia:
 		System.out.println("Reservas del 23 de abril:");
 		List<Reserva> reservasHoy = sistema.consultarPorDia(LocalDate.of(2025, 4, 23));
-		reservasHoy.forEach(System.out::println);
+        for (Reserva reserva : reservasHoy) {
+            System.out.println(reserva);
+        }
 
 //		Mostrar reservas por comensales:
 		System.out.println("\nReservas del 23 de abril ordenadas por número de comensales:");
 		List<Reserva> ordenadas = sistema.consultarOrdenadasPorComensales(LocalDate.of(2025, 4, 23));
-		ordenadas.forEach(System.out::println);
-		}
+        for (Reserva reserva : ordenadas) {
+            System.out.println(reserva);
+        }
+	}
 }

@@ -6,7 +6,7 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-// Nos poermite gestionar las reservas.
+// Nos permite gestionar las reservas.
 public class SistemaReservas {
 //	Atributos:
 	List<Reserva> reservas = new ArrayList<>(); 
@@ -21,7 +21,7 @@ public class SistemaReservas {
 		LocalDate dia = r.getFechaHora().toLocalDate();
 //		A la hora de incluir la reserva en el mapa, si no existen reservas ese día 
 //		crea una lista nueva vacía.
-        reservasPorDia.computeIfAbsent(dia, k -> new ArrayList<>()).add(r);
+        reservasPorDia.computeIfAbsent(dia, reservasNuevo -> new ArrayList<>()).add(r);
 	}
 	
 	/**
